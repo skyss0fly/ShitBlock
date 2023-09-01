@@ -15,10 +15,12 @@ public function onCommand(CommandSender $sender, Command $command, string $label
     return false;
    }
    else {
-    
+      $x = $sender->getPosition()->getX();
+        $y = $sender->getPosition()->getY();
+        $z = $sender->getPosition()->getZ();
     
 
- $block = $this->getServer()->getWorldManager()->getWorld()->getBlockAt($sender->getPosition()->getFloorX(),$sender->getPosition()->getFloorY() - 1, $sender->getPosition()->getFloorZ());
+ $block = $this->getServer()->getWorldManager()->getWorld()->getBlockAt($x . $y -1 . $z);
      $this->getServer()->getWorldManager()->getWorld()->setBlock($block, VanillaBlocks::MUD_BLOCK());
     $this->getServer()->broadcastMessage(TEXTFORMAT::BOLD . TEXTFORMAT::YELLOW . $sender->getName() . " Took a Fat Shit at " . $x . " " . $y . " " . $z . " !");
     return true;
