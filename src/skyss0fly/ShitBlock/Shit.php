@@ -3,8 +3,11 @@ namespace skyss0fly\ShitBlock;
 
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\{command\Command ,utils\TextFormat, world\WorldManager, block\VanillaBlocks, command\CommandSender , player\Player};
-
+use pocketmine\{ utils\TextFormat, world\WorldManager, block\VanillaBlocks};
+se pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\player\Player;
+use pocketmine\world\Position;
 class Shit extends PluginBase {
  
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
