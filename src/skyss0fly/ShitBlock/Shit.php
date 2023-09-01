@@ -42,7 +42,7 @@ class Shit extends PluginBase {
             
 
         if ($command->getName() === "shit") {
-            if (!$sender->hasPermission("ShitBlock.TakeAFatShit")) {
+            if (!$sender->hasPermission("ShitBlock.ShitHouse")) {
                 $sender->sendMessage(TextFormat::RED . "Bruh no perms");
                 return false; 
 
@@ -57,7 +57,7 @@ class Shit extends PluginBase {
                 $wallbaseleft = $world->getBlockAt($x, $y, $z);
                 $world->setBlock(VanillaBLOCKS::MUD(), $schematic);
 
-                $this->getServer()->broadcastMessage(TextFormat::BOLD . TextFormat::YELLOW . $sender->getName() . " Took a Fat sh1t at " . $x . " " . $y . " " . $z . " !");
+                $this->getServer()->broadcastMessage(TextFormat::BOLD . TextFormat::YELLOW . $sender->getName() . " Made a House out of sh1t at " . $x . " " . $y . " " . $z . " !");
                 return true;
 
         return false;
