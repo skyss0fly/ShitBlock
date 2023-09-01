@@ -1,0 +1,16 @@
+name: ShitBlock
+main: skyss0fly\ShitBlock\Shit
+version: 1.1
+api: 5.0.0
+author: skyss0fly
+description: A simple Shitting plugin
+permissions:
+  ShitBlock.TakaAFatShit:
+    default: op
+
+commands:
+  shit:
+    description: use this to make them suffer by dropping a fat load
+    permission: ShitBlock.TakaAFatShit
+    default: false
+  
