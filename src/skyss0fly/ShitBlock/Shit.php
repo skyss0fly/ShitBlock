@@ -19,6 +19,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             $this->getLogger()->warning("Please use this command in-game");
             return false;
         }
+ if ($sender instanceof Player){
     switch ($command->getName()) {
         case "shit":
             if (!$sender->hasPermission("ShitBlock.TakaAFatShit")){
@@ -34,5 +35,6 @@ public function onCommand(CommandSender $sender, Command $command, string $label
             }
     }
     return false;
+}
 }
 }
