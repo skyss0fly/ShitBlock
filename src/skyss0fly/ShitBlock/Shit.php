@@ -10,18 +10,17 @@ class Shit extends PluginBase {
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
   switch ($command->getName()) {
             case "shit":
-   $player = $sender->getPlayer();
-   if ($sender->hasPermission("ShitBlock.TakaAFatShit")){
-    $world = $this->getServer()->getWorldManager()->getWorld();
+   if (!$sender->hasPermission("ShitBlock.TakaAFatShit")){
+    $sender->sendMessage(TEXTFORMAT::RED . "Bruh no perms");
+    return false;
+   }
+   else {
+        $world = $this->getServer()->getWorldManager()->getWorld();
  $block = $world->getBlockAt($sender->getPosition()->getFloorX(),$sender->getPosition()->getFloorY() - 1, $sender->getPosition()->getFloorZ());
     $world->setBlock($block, VanillaBlocks::MUD_BLOCK());
     $this->getServer()->broadcastMessage(TEXTFORMAT::BOLD . TEXTFORMAT::YELLOW . $sender->getName() . " Took a Fat Shit at " . $x . " " . $y . " " . $z . " !");
     return true;
 }
-   else {
-$sender->sendMessage(TEXTFORMAT::RED . "Bruh no perms");
-    return false;
-   }
    return false;
 }
 }
