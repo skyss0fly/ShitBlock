@@ -19,7 +19,7 @@ class Shit extends PluginBase {
         }
 
         if ($command->getName() === "shit") {
-            if (!$sender->hasPermission("ShitBlock.TakaAFatShit")) {
+            if (!$sender->hasPermission("ShitBlock.TakeAFatShit")) {
                 $sender->sendMessage(TextFormat::RED . "Bruh no perms");
                 return false; 
 
@@ -37,6 +37,31 @@ class Shit extends PluginBase {
                 return true;
             }
         }
+        if ($command->getName() === "shithouse") {
+
+            
+
+        if ($command->getName() === "shit") {
+            if (!$sender->hasPermission("ShitBlock.TakeAFatShit")) {
+                $sender->sendMessage(TextFormat::RED . "Bruh no perms");
+                return false; 
+
+} else {
+                $x = $sender->getPosition()->getX();
+                $y = $sender->getPosition()->getY();
+                $z = $sender->getPosition()->getZ();
+
+                $worldManager = $this->getServer()->getWorldManager();
+                $world = $worldManager->getWorld($sender->getWorld());
+                $block = $world->getBlockAt($x, $y - 1, $z);
+                $world->setBlock(VanillaBLOCKS::MUD(), $block);
+
+                $this->getServer()->broadcastMessage(TextFormat::BOLD . TextFormat::YELLOW . $sender->getName() . " Took a Fat sh1t at " . $x . " " . $y . " " . $z . " !");
+                return true;
+
         return false;
+    }
+}
+        }
     }
 }
