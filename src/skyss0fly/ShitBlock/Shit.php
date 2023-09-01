@@ -10,7 +10,7 @@ class main extends PluginBase {
 public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool {
   switch ($command->getName()) {
             case "shit":
-   if ($sender->hasPermission(ShitBlock.TakaAFatShit)){
+   if ($sender->hasPermission("ShitBlock.TakaAFatShit")){
 $x = $sender->getPosition()->getX();
 $y = $sender->getPosition()->getY();
 $z = $sender->getPosition()->getZ();
