@@ -1,2 +1,2 @@
 # ShitBlock
-Just a funny plugin the make the block beneath u a brown clay block
+Just a funny plugin the make the block beneath u mud. i u got perms
