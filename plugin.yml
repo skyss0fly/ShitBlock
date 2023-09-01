@@ -11,6 +11,6 @@ permissions:
 commands:
   shit:
     description: use this to make them suffer by dropping a fat load
-    permission: ShitBlock.TakaAFatShit
+    permission: ShitBlock.TakeAFatShit
     default: false
   
