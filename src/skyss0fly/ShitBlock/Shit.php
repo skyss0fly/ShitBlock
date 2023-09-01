@@ -53,8 +53,9 @@ class Shit extends PluginBase {
 
                 $worldManager = $this->getServer()->getWorldManager();
                 $world = $worldManager->getWorld($sender->getWorld());
-                $block = $world->getBlockAt($x, $y - 1, $z);
-                $world->setBlock(VanillaBLOCKS::MUD(), $block);
+                $base = $world->getBlockAt($x, $y - 1, $z);
+                $wallbaseleft = $world->getBlockAt($x, $y, $z);
+                $world->setBlock(VanillaBLOCKS::MUD(), $schematic);
 
                 $this->getServer()->broadcastMessage(TextFormat::BOLD . TextFormat::YELLOW . $sender->getName() . " Took a Fat sh1t at " . $x . " " . $y . " " . $z . " !");
                 return true;
