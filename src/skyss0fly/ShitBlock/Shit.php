@@ -21,7 +21,7 @@ public function onCommand(CommandSender $sender, Command $command, string $label
     $this->getServer()->broadcastMessage(TEXTFORMAT::BOLD . TEXTFORMAT::YELLOW . $sender->getName() . " Took a Fat Shit at " . $x . " " . $y . " " . $z . " !");
     return true;
 }
-   return false;
 }
+ return false;
 }
 }
