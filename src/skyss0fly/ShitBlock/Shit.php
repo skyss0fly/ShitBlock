@@ -19,7 +19,7 @@ class Shit extends PluginBase {
         }
 
         if ($command->getName() === "shit") {
-            if (!$sender->hasPermission("ShitBlock.TakaAFatShit")) {
+            if (!$sender->hasPermission("ShitBlock.TakeAFatShit")) {
                 $sender->sendMessage(TextFormat::RED . "Bruh no perms");
                 return false; 
 
