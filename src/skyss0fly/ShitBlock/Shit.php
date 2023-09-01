@@ -4,7 +4,7 @@ namespace skyss0fly\ShitBlock;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\{ utils\TextFormat, world\WorldManager, block\VanillaBlocks};
-se pocketmine\command\Command;
+use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\world\Position;
