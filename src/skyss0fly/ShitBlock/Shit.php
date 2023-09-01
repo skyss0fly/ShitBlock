@@ -16,7 +16,7 @@ $y = $sender->getPosition()->getY();
 $z = $sender->getPosition()->getZ();
  $block = $world->getBlockAt($sender->getPosition()->getFloorX(),$sender->getPosition()->getFloorY() - 1, $sender->getPosition()->getFloorZ());
     $world->setBlock($block, VanillaBlocks::MUD_BLOCK());
-    $this->getServer()->broadcastMessage(TEXTFORMAT::BOLD . TEXTFORMAT:YELLOW . $sender->getName() . " Took a Fat Shit at " . $x . " " . $y . " " . $z . " !");
+    $this->getServer()->broadcastMessage(TEXTFORMAT::BOLD . TEXTFORMAT::YELLOW . $sender->getName() . " Took a Fat Shit at " . $x . " " . $y . " " . $z . " !");
 }
    else {
 $sender->sendMessage(TEXTFORMAT::RED . "Bruh no perms");
