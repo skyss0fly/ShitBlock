@@ -29,7 +29,7 @@ class Shit extends PluginBase {
                 $z = $sender->getPosition()->getZ();
 
                 $worldManager = $this->getServer()->getWorldManager();
-                $world = $worldManager->getWorld();
+             $world = $sender->getWorld();
                 $block = $world->getBlockAt($x, $y - 1, $z);
                 $world->setBlock(VanillaBLOCKS::MUD(), $block);
 
